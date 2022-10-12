@@ -11,6 +11,7 @@ export function Text<TType extends keyof JSX.IntrinsicElements>({
   children,
   size = "md",
   as,
+  ...props
 }: TextProps<TType>) {
   const type = typeof as === "string" ? as : "p";
   return createElement(type, {
@@ -20,5 +21,6 @@ export function Text<TType extends keyof JSX.IntrinsicElements>({
       "text-base": size === "md",
       "text-lg": size === "lg",
     }),
+    ...props,
   });
 }

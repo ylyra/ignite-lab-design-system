@@ -16,7 +16,7 @@ export function Heading<
     JSX.IntrinsicElements,
     "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
   >
->({ children, size = "md", as }: HeadingProps<TType>) {
+>({ children, size = "md", as, ...props }: HeadingProps<TType>) {
   const type = typeof as === "string" ? as : "h2";
   return createElement(type, {
     children,
@@ -25,5 +25,6 @@ export function Heading<
       "text-2xl": size === "md",
       "text-3xl": size === "lg",
     }),
+    ...props,
   });
 }

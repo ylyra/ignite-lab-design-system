@@ -7,6 +7,7 @@ export default {
   args: {
     children: "Hello world",
     size: "md",
+    as: "h2",
   },
   argTypes: {
     size: {

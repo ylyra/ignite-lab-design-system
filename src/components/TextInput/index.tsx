@@ -6,7 +6,7 @@ export type TextInputRootProps = {
 
 export function TextInput({ children }: TextInputRootProps) {
   return (
-    <div className="border-none outline-none focus:ring-2 ring-offset-2 ring-offset-gray-800 focus:ring-cyan-500 py-4 px-3 rounded w-full bg-gray-800 flex itens-center gap-3">
+    <div className="border-none h-12 outline-none focus:ring-2 ring-offset-2 ring-offset-gray-800 focus:ring-cyan-500 py-4 px-3 rounded w-full bg-gray-800 flex itens-center gap-3">
       {children}
     </div>
   );

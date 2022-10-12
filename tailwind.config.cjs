@@ -9,6 +9,7 @@ module.exports = {
     },
     colors: {
       black: "#000",
+      white: "#fff",
       gray: {
         900: "#121214",
         800: "#202024",
@@ -30,5 +31,5 @@ module.exports = {
       "3xl": "2rem",
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };

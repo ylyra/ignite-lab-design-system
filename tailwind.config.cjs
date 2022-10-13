@@ -31,5 +31,5 @@ module.exports = {
       "3xl": "2rem",
     },
   },
-  plugins: [require("@tailwindcss/forms")],
+  plugins: [],
 };

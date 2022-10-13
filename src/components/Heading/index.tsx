@@ -16,15 +16,19 @@ export function Heading<
     JSX.IntrinsicElements,
     "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
   >
->({ children, size = "md", as, ...props }: HeadingProps<TType>) {
+>({ children, size = "md", as, className, ...props }: HeadingProps<TType>) {
   const type = typeof as === "string" ? as : "h2";
   return createElement(type, {
     children,
-    className: clsx("text-gray-100 font-bold font-sans", {
-      "text-xl": size === "sm",
-      "text-2xl": size === "md",
-      "text-3xl": size === "lg",
-    }),
+    className: clsx(
+      "text-gray-100 font-bold font-sans",
+      {
+        "text-xl": size === "sm",
+        "text-2xl": size === "md",
+        "text-3xl": size === "lg",
+      },
+      className
+    ),
     ...props,
   });
 }

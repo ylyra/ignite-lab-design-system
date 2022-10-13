@@ -1,4 +1,9 @@
-import { cloneElement, InputHTMLAttributes, ReactNode } from "react";
+import {
+  cloneElement,
+  InputHTMLAttributes,
+  ReactElement,
+  ReactNode,
+} from "react";
 
 export type TextInputRootProps = {
   children: ReactNode;
@@ -6,14 +11,14 @@ export type TextInputRootProps = {
 
 export function TextInput({ children }: TextInputRootProps) {
   return (
-    <div className="border-none h-12 outline-none focus:ring-2 ring-offset-2 ring-offset-gray-800 focus:ring-cyan-500 py-4 px-3 rounded w-full bg-gray-800 flex itens-center gap-3">
+    <div className="border-none h-12 outline-none focus:ring-2 ring-offset-2 ring-offset-gray-800 focus:ring-cyan-500 py-4 px-3 rounded w-full bg-gray-800 flex items-center gap-3">
       {children}
     </div>
   );
 }
 
 export type TextInputIconProps = {
-  children: JSX.Element;
+  children: ReactElement;
 };
 
 function TextInputIcon({ children }: TextInputIconProps) {
